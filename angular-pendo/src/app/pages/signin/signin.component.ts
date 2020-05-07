@@ -27,6 +27,9 @@ export class SigninComponent implements OnInit {
         console.log('I am not authorized');
     } else {
       console.log('I am authorized');
+      // After verifying that a user is authorized, we put the pendo.initialize inside whatever
+      // method we need for our app. In this case, it's a redirect to a landing page.
+      // They important thing here is to remember not to include the API key with the initialize method.
       this.httpClient.get(this.apiUrl, {}).subscribe(r => {
             pendo.initialize({
                 visitor: {
