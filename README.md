@@ -1,2 +1,2 @@
 # angularPendo
- Working implementaion of Pendo in Angular 8
+Working implementaion of Pendo in Angular 8
