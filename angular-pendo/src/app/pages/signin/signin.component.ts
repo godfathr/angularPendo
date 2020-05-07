@@ -28,20 +28,17 @@ export class SigninComponent implements OnInit {
     } else {
       console.log('I am authorized');
       this.httpClient.get(this.apiUrl, {}).subscribe(r => {
-            //this.ngZone.runOutsideAngular(function() {
-                pendo.initialize({
-                    visitor: {
-                        id: 'VISITOR-UNIQUE-ID-test'
-                    },
-                    account: {
-                        id: 'ACCOUNT-UNIQUE-ID-test'
-                    }
-                });
-            //});
+            pendo.initialize({
+                visitor: {
+                    id: 'VISITOR-UNIQUE-ID-test'
+                },
+                account: {
+                    id: 'ACCOUNT-UNIQUE-ID-test'
+                }
+            });
 
             this.router.navigate(['/authorized']);
         });
-
     }
-}
+  }
 }
